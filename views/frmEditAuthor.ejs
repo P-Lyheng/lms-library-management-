@@ -45,7 +45,7 @@
         <!-- /.container-fluid -->
         <div class="container mt-5">
           <h1 class="h3 mb-4 text-gray-800">Update Book</h1>
-          <form action="/editAuthor" method="post">
+          <form action="/editAuthor" method="post" enctype="multipart/form-data">
             
               <!-- Text Input -->
                <input type="hidden" name="author_id" id="author_id" value = "<%=data[0].author_id%>">
@@ -53,6 +53,12 @@
                   <label for="inputName">Author Name</label>
                   <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" value = "<%=data[0].name%>">
               </div>
+              <input type="text" name = "old_img" value="<%=data[0].image %>">
+              <div class="form-group">
+                <label for="uploadFile">Image</label>
+                <input type="file" id="authorImage" name="image">
+            </div>
+            
       
     
               <!-- Submit Button -->

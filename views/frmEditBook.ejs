@@ -46,7 +46,7 @@
         <!-- /.container-fluid -->
         <div class="container mt-5">
           <h1 class="h3 mb-4 text-gray-800">Update Book</h1>
-          <form action="/editBook" method="post">
+          <form action="/editBook" method="post" enctype="multipart/form-data">
             
               <!-- Text Input -->
                <input type="hidden" name="book_id" id="book_id" value = "<%=data[0].book_id%>">
@@ -78,7 +78,12 @@
                       <option value="">Stategy</option>
                   </select>
               </div>
-      
+              <input type="text" name = "old_img" value="<%=data[0].image %>">
+              <div class="form-group">
+                <label for="uploadFile">Image</label>
+                <input type="file" id="authorImage" name="image">
+            </div>
+            
               <!-- Submit Button -->
               <button type="submit" class="btn btn-primary">Submit</button>
           </form>

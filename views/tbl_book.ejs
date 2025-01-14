@@ -36,6 +36,7 @@
                   <thead>
                     <tr>
                       <th>ID</th>
+                      <th>Image</th>
                       <th>Book Name</th>
                       <th>Author</th>
                       <th>Category</th>
@@ -48,6 +49,7 @@
 
                     <tr>
                       <td><%=e.book_id %></td>
+                      <td><img class="image_column" src="images/<%=e.image%>" alt="author_img"></td>
                       <td><%=e.name %></td>
                       <td><%=e.author_id %></td>
                       <td><%=e.category_id %></td>

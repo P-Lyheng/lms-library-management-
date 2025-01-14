@@ -31,12 +31,16 @@
         <!-- /.container-fluid -->
         <div class="container mt-5">
           <h1 class="h3 mb-4 text-gray-800">Create Category</h1>
-          <form action="/addCategory" method="post">
+          <form action="/addCategory" method="post" enctype="multipart/form-data">
               <!-- Text Input -->
               <div class="form-group">
                   <label for="inputName">Category Name</label>
                   <input type="text" class="form-control" id="categoryName" name="categoryName" placeholder="Category's name">
               </div>
+              <div class="form-group">
+                <label for="uploadFile">Image</label>
+                <input type="file" id="authorImage" name="image">
+            </div>
               <!-- Submit Button -->
               <button type="submit" class="btn btn-primary">Add</button>
           </form>

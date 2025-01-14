@@ -45,7 +45,7 @@
         <!-- /.container-fluid -->
         <div class="container mt-5">
           <h1 class="h3 mb-4 text-gray-800">Update Book</h1>
-          <form action="/editCategory" method="post">
+          <form action="/editCategory" method="post" enctype="multipart/form-data">
             <%=JSON.stringify(data[0]) %>
               <!-- Text Input -->
                <input type="hidden" name="category_id" id="category_id" value = "<%=data[0].category_id%>">
@@ -53,7 +53,13 @@
                   <label for="inputName">category Name</label>
                   <input type="text" class="form-control" id="categoryName" name="categoryName" placeholder="Category's name" value = "<%=data[0].name%>">
               </div>
-      
+              <input type="text" name = "old_img" value="<%=data[0].image %>">
+              <div class="form-group">
+                <label for="uploadFile">Image</label>
+                <input type="file" id="authorImage" name="image">
+            </div>
+            
+  
     
               <!-- Submit Button -->
               <button type="submit" class="btn btn-primary">Update</button>

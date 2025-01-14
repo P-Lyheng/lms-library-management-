@@ -36,17 +36,16 @@
                   <thead>
                     <tr>
                       <th>ID</th>
+                      <th>Image</th>
                       <th>Category name </th>
                       <th width="115px">Action</th>
                     </tr>
                   </thead>
                   <tbody>
-
                     <% data.forEach(e => { %>
-
                     <tr>
-                      
-                      <td><%=e.category_id %></td>         
+                      <td><%=e.category_id %></td> 
+                      <td><img class="image_column" src="images/<%=e.image%>" alt="author_img"></td>        
                       <td><%=e.name %></td>         
                       <td>
                         <div class="w-100 d-flex justify-content-between" >

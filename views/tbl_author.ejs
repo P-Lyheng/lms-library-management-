@@ -41,6 +41,7 @@
                   <thead>
                     <tr>
                       <th>id</th>
+                      <th>Image</th>
                       <th>Name</th>
                       <th width="115px">Action</th>
                   
@@ -51,6 +52,7 @@
                     <% data.forEach(e => { %>
                       <tr> 
                         <td><%=e.author_id %></td>
+                        <td><img class="image_column" src="images/<%=e.image%>" alt="author_img"></td>
                         <td><%=e.name %></td> <td>
                           <div class="w-100 d-flex justify-content-between" >
                             <!-- Edit Button -->
